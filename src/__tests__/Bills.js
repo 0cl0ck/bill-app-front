@@ -26,6 +26,9 @@ describe("Given I am connected as an employee", () => {
       await waitFor(() => screen.getByTestId('icon-window'))
       const windowIcon = screen.getByTestId('icon-window')
       //to-do write expect expression
+      expect(windowIcon.classList.contains('active-icon')).toBe(true);
+      // expect(window.getComputedStyle(windowIcon).backgroundColor).toBe('rgb(123, 177, 247)');
+
 
     })
     test("Then bills should be ordered from earliest to latest", () => {
